@@ -119,10 +119,10 @@ header .menu a {
     background: url(./img/bg2.jpg) center center/cover no-repeat;
 }
 .slide2 {
-    background: url(./img/bg3.jpg) center center/cover no-repeat;
+    background: url(./img/bg1.jpg) center center/cover no-repeat;
 }
 .slide3 {
-    background: url(./img/bg1.jpg) center center/cover no-repeat;
+    background: url(./img/bg3.jpg) center center/cover no-repeat;
 }
 
 .swiper .text-box h1 {
@@ -176,7 +176,7 @@ header .menu a {
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     width: auto!important;
-    left: 60px!important;
+    left: 70px!important;
 }
 
 :root {
@@ -568,10 +568,10 @@ section.tech .title-box{
 }
 
 .swiper-button-next {
-    right:calc(100vw - 258px)!important;
+    right:calc(100vw - 268px)!important;
 }
 
 .swiper-button-prev {
-    left:calc(30px)!important;
+    left:calc(40px)!important;
 }
 
