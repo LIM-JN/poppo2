@@ -316,7 +316,7 @@ section.numbers .content-wrap {
     flex-wrap: wrap;
 }
 section.numbers .content-wrap .content {
-    width: 33.333%;
+    width: 50%;
     margin-top: 40px;
 }
 
@@ -537,6 +537,9 @@ section.tech .title-box{
     }
     footer .flex div a {
         margin: 0 15px;
+    }
+    section.numbers .content-wrap .content {
+        width: 33.333%;
     }
 }
 
