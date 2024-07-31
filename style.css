@@ -85,8 +85,13 @@ header {
     position:fixed;
     width: 100%;
     background-color: #222222;
+    transition:0.4s;
     z-index: 999;
     box-shadow:0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+header.on {
+    background-color: #000;
 }
 
 header .logo {
@@ -94,13 +99,6 @@ header .logo {
     margin-left: -15px;
 }
 
-header .menu {
-    display: flex;
-}
-
-header .menu a {
-    margin: 0 28px;
-}
 
 .swiper {
     width: 100%;
@@ -119,10 +117,10 @@ header .menu a {
     background: url(./img/bg2.jpg) center center/cover no-repeat;
 }
 .slide2 {
-    background: url(./img/bg3.jpg) center center/cover no-repeat;
+    background: url(./img/bg1.jpg) center center/cover no-repeat;
 }
 .slide3 {
-    background: url(./img/bg1.jpg) center center/cover no-repeat;
+    background: url(./img/bg3.jpg) center center/cover no-repeat;
 }
 
 .swiper .text-box h1 {
@@ -176,7 +174,7 @@ header .menu a {
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     width: auto!important;
-    left: 60px!important;
+    left: 70px!important;
 }
 
 :root {
@@ -235,7 +233,7 @@ header .menu a {
     opacity: 0;
 } 
 
-.sub-menu {
+.m-menu {
     display: none;
     width: 240px;
     height: 100%;
@@ -246,11 +244,11 @@ header .menu a {
     padding-top: 120px;
 }
 
-.sub-menu.on {
+.m-menu.on {
     display: block;
 }
 
-.sub-menu a {
+.m-menu a {
     font-size: 18px;
     display: block;
     padding:19px 40px;
@@ -316,7 +314,7 @@ section.numbers .content-wrap {
     flex-wrap: wrap;
 }
 section.numbers .content-wrap .content {
-    width: 33.333%;
+    width: 50%;
     margin-top: 40px;
 }
 
@@ -490,6 +488,74 @@ section.tech .title-box{
     margin: auto;
 }
 
+.main-menu {
+    display: none;
+    height: 100%;
+}
+
+.main-menu .menu-a{
+    display: inline-block;
+    padding: 0px 30px;
+    font-size: 18px;
+    transition:0.4s;
+    height: 100%;
+    line-height: 70px;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+}
+header.on .main-menu .menu-a {
+    border-bottom: 2px solid transparent;
+}
+.main-menu .menu-a.on {
+    color:#db4342;
+    border-bottom: 2px solid #db4342!important;
+}
+
+
+header .sub-menu {
+    position:absolute;
+    height:0px;
+    background-color: #000;
+    width: 100%;
+    top:68px;
+    left:0px;
+    transition:0.4s;
+    opacity: 0;
+    z-index: -9;
+    display: flex;
+    justify-content: center;
+    padding-left: 93px;
+}
+
+.menu-a.on .sub-menu {
+    opacity: 1;
+    height:70px;
+    border-top: 2px solid #444444;
+}
+
+.sub-menu ul {
+    width: 612px;
+    display: flex;
+}
+.sub-menu ul li {
+    width: 20%;
+    height: 100%;
+    line-height: 68px;
+    cursor: pointer;
+    color:white;
+    text-align: center;
+    transition: 0.4s;
+    display: none;
+}
+
+.menu-a.on .sub-menu ul li {
+    display: block;
+}
+
+.sub-menu ul li:hover {
+    color:#db4342;
+}
+
 @media screen and (min-width:800px) {
     section.about .content-wrap{
         display: flex;
@@ -538,13 +604,16 @@ section.tech .title-box{
     footer .flex div a {
         margin: 0 15px;
     }
+    section.numbers .content-wrap .content {
+        width: 33.333%;
+    }
 }
 
 @media screen and (min-width:1100px) {
     section.tech {
         display: flex;
         justify-content: space-around;
-        margin: 80px 0;
+        margin: 40px 0;
     }
 
     section.tech .penta {
@@ -561,6 +630,18 @@ section.tech .title-box{
     section.last .title-box h2 {
         font-size: 32px;
     }
+
+    .main-menu {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -568,10 +649,10 @@ section.tech .title-box{
 }
 
 .swiper-button-next {
-    right:calc(100vw - 258px)!important;
+    right:calc(100vw - 268px)!important;
 }
 
 .swiper-button-prev {
-    left:calc(30px)!important;
+    left:calc(40px)!important;
 }
 

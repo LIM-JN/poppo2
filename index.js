@@ -43,11 +43,31 @@ document.addEventListener('DOMContentLoaded',() => {
       });
 
   const menuBtn = document.querySelector('.menu-btn');
-  const subMenu = document.querySelector('.sub-menu');
+  const subMenu = document.querySelector('.m-menu');
 
   menuBtn.addEventListener('click',(e) => {
     menuBtn.classList.toggle('on');
     subMenu.classList.toggle('on');
   })
+
+  const mainMenuA = document.querySelectorAll('.menu-a');
+  const header = document.querySelector('header');
+  for (let i=0;i<mainMenuA.length;i++) {
+    mainMenuA[i].addEventListener('mouseenter',()=> {
+      header.classList.add('on');
+      mainMenuA[i].classList.add('on');
+      for(let j=0;j<mainMenuA.length;j++) {
+        if(i!==j) {
+          mainMenuA[j].classList.remove('on');
+        }
+      }
+    })
+    header.addEventListener('mouseleave',()=> {
+      header.classList.remove('on');
+      for(let j=0;j<mainMenuA.length;j++) {
+        mainMenuA[j].classList.remove('on');
+      }
+    })
+  }
 })
 
