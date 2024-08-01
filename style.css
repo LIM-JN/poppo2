@@ -246,6 +246,7 @@ header .logo {
 
 .m-menu.on {
     display: block;
+    z-index: 99;
 }
 
 .m-menu a {
@@ -377,7 +378,6 @@ section.red-line h3, section.last h3 {
 }
 
 .slide-box {
-    min-width: 350px;
     margin: 60px auto;
 }
 .slide-box .img-container {
@@ -406,6 +406,7 @@ section.last .btn {
 section.last .btn:hover {
     background-color: white;
     color:#222222;
+    font-weight: bold;
 }
 
 section.last .swiper-slide {
@@ -478,9 +479,10 @@ footer p {
     height: 100px;
 }
 .decoration .thing {
-    border-radius: 0 0 45px 0;
+    border-radius: 0 0 50px 0;
     height: 100px;
     background-color: #222222;
+    margin-top: -40px;
 }
 
 section.tech .title-box{
@@ -609,11 +611,17 @@ header .sub-menu {
     }
 }
 
+@media screen and (min-width:500px) {
+    .slide-box {
+        min-width: 360px;
+    }
+} 
+
 @media screen and (min-width:1100px) {
     section.tech {
         display: flex;
         justify-content: space-around;
-        margin: 40px 0;
+        margin: 0 0 40px 0;
     }
 
     section.tech .penta {
@@ -641,7 +649,13 @@ header .sub-menu {
     h3 {
         font-size: 24px;
     }
-
+    .decoration .thing {
+        border-radius: 0 0 70px 0;
+    }
+    .curve-line {
+        height: 360px;
+        margin-bottom: -80px;
+    }
 }
 
 .swiper-button-next, .swiper-button-prev {

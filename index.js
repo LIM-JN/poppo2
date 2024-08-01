@@ -69,5 +69,12 @@ document.addEventListener('DOMContentLoaded',() => {
       }
     })
   }
+  const mobileMenu = document.querySelector('.m-menu');
+  mobileMenu.addEventListener('mouseenter',() => {
+    header.classList.remove('on');
+    for(let j=0;j<mainMenuA.length;j++) {
+      mainMenuA[j].classList.remove('on');
+    }
+  })
 })
 
